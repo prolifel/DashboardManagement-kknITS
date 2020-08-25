@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.headers.cards')
+    @include('layouts.headers.header')
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form role="form" method="POST" action="/user/store">
+                        <form role="form" method="POST" action="{{ route('user.store') }}">
                             @csrf
 
                             @if (session('status'))
@@ -76,6 +76,6 @@
             </div>
         </div>
 
-        @include('layouts.footers.auth')
+        @include('layouts.footers.footer')
     </div>
 @endsection

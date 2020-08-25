@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.headers.cards')
+    @include('layouts.headers.header')
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -18,7 +18,7 @@
                     </div>
                     <div class="card-body">
                         @foreach($user as $u)
-                            <form method="post" action="/user/update" autocomplete="off">
+                            <form method="post" action="{{ route('user.update') }}" autocomplete="off">
                                 @csrf
 
                                 <h6 class="heading-small text-muted mb-4">{{ __('User information') }}</h6>
@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <form method="post" action="/user/password" autocomplete="off">
+                            <form method="post" action="{{ route('user.password') }}" autocomplete="off">
                                 @csrf
 
                                 <h6 class="heading-small text-muted mb-4">{{ __('Password') }}</h6>
@@ -102,6 +102,6 @@
             </div>
         </div>
 
-        @include('layouts.footers.auth')
+        @include('layouts.footers.footer')
     </div>
 @endsection

@@ -7,7 +7,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <h1 class="navbar-brand-img">FORUM Q&A</h1>
+            <h1 class="text-white">Dashboard</h1>
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -72,16 +72,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
                         <i class="ni ni-world text-primary"></i> {{ __('Home') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/post">
-                        <i class="ni fas fa-edit text-primary"></i> {{ __('My Posts') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/comment">
-                        <i class="ni far fa-comment text-primary"></i></i> {{ __('My Comments') }}
                     </a>
                 </li>
                 <li class="nav-item">

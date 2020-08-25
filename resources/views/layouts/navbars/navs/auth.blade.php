@@ -5,13 +5,13 @@
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
             href="{{ route('home') }}">{{ __('Home') }}</a>
         <!-- Form -->
-        <form action="/post/search" method="get" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+        <form action="" method="get" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
             <div class="form-group mb-0">
                 <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-search"></i></span>
                     </div>
-                    <input class="form-control" name="search" placeholder="Search Post" type="text">
+                    <input class="form-control" name="search" placeholder="Search" type="text">
                 </div>
             </div>
         </form>
@@ -31,18 +31,6 @@
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">{{ __('Welcome!') }}</h6>
                     </div>
-                    <a href="/post/create" class="dropdown-item">
-                        <i class="ni fas fa-pencil-alt"></i>
-                        <span>{{ __('Write a post') }}</span>
-                    </a>
-                    <a href="/post" class="dropdown-item">
-                        <i class="ni fas fa-edit"></i>
-                        <span>{{ __('My Posts') }}</span>
-                    </a>
-                    <a href="/comment" class="dropdown-item">
-                        <i class="ni far fa-comment"></i>
-                        <span>{{ __('My Comments') }}</span>
-                    </a>
                     <a href="{{ route('profile.edit') }}" class="dropdown-item">
                         <i class="ni ni-single-02"></i>
                         <span>{{ __('My profile') }}</span>
