@@ -78,59 +78,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($covid_provinces as $covid_province)
                                 <tr>
-                                    <td>DKI Jakarta</td>
-                                    <td>34740</td>
-                                    <td>25987</td>
-                                    <td>1129</td>
+                                    <td>{{ $covid_province->province }}</td>
+                                    <td>{{ $covid_province->positive }}</td>
+                                    <td>{{ $covid_province->recovered }}</td>
+                                    <td>{{ $covid_province->death }}</td>
                                 </tr>
-                                <tr>
-                                    <td>Jawa Barat</td>
-                                    <td>30998</td>
-                                    <td>24301</td>
-                                    <td>2222</td>
-                                </tr>
-                                <tr>
-                                    <td>Daerah Istimewa Yogyakarta</td>
-                                    <td>1248</td>
-                                    <td>857</td>
-                                    <td>34</td>
-                                </tr>
-                                <tr>
-                                    <td>Jawa Tengah</td>
-                                    <td>12826</td>
-                                    <td>8208</td>
-                                    <td>874</td>
-                                </tr>
-                                <tr>
-                                    <td>Jawa Tengah</td>
-                                    <td>9670</td>
-                                    <td>5881</td>
-                                    <td>263</td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
-                        <div class="col-3 ml-auto mr-0">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active"><p class="page-link disabled" href="#">1</p></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
                     </div>
                     <div class="card-footer"></div>
                 </div>

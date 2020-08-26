@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CovidProvince;
 use App\Post;
 
 class HomeController extends Controller
@@ -13,6 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $covid_provinces = CovidProvince::all();
+        return view('home', compact('covid_provinces'));
     }
 }

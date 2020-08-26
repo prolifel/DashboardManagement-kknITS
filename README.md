@@ -8,7 +8,7 @@
     ```sh
     $ composer dump-autoload
     ```
-3. Create a database named `forum` in your `SQL` and to create basic users table, run
+3. Create a database named `dashboard_kkn` in your `SQL` and to create basic users table, run
     ```sh
     $ php artisan migrate --seed
     ``` 

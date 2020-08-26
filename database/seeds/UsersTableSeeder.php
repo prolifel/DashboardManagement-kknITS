@@ -13,8 +13,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'User 1',
-            'role' => 'User',
+            'name' => 'User',
+            'role' => 'user',
             'email' => 'user@mail.com',
             'password' => Hash::make('secret'),
             'created_at' => now(),
@@ -22,18 +22,9 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'User 2',
-            'role' => 'User',
-            'email' => 'user2@mail.com',
-            'password' => Hash::make('secret'),
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
-
-        DB::table('users')->insert([
-            'name' => 'User 3',
-            'role' => 'User',
-            'email' => 'user3@mail.com',
+            'name' => 'Admin',
+            'role' => 'admin',
+            'email' => 'admin@mail.com',
             'password' => Hash::make('secret'),
             'created_at' => now(),
             'updated_at' => now()
