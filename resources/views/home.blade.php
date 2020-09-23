@@ -1,9 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.headers.header')
+    {{-- Content --}}
+    <div class="header bg-gradient-primary py-7 py-lg-8">
+        <div class="container-fluid">
+            <div class="post-slider">
+                <div class="post">1</div>
+                <div class="post">2</div>
+                <div class="post">3</div>
+                <div class="post">4</div>
+                <div class="post">5</div>
+                <div class="post">6</div>
+            </div>
+            <div class="header-body text-center mt-7 mb-7">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <h1 class="text-white">{{ __('Selamat Datang di Website Interaktif KKN Abdimas ITS') }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
 
-    <div class="container-fluid mt--7">
+    {{-- <div class="container-fluid mt--7">
         <div class="row">
             <div class="col mb-5 mb-xl-0">
                 <div class="card shadow mb-3">
@@ -94,10 +118,24 @@
             </div>
         </div>
         @include('layouts.footers.footer')
+    </div> --}}
+
+    {{-- Footer --}}
+    <div class="container-fluid">
+        @include('layouts.footers.footer')
     </div>
 @endsection
 
 @push('js')
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+        $('.post-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        });
+    </script>
 @endpush

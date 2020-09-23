@@ -955,7 +955,7 @@ var OrdersChart = (function() {
 							}
 
 							content += '<span class="popover-body-value">' + yLabel + '</span>';
-							
+
 							return content;
 						}
 					}
@@ -1059,5 +1059,22 @@ var SalesChart = (function() {
 	if ($chart.length) {
 		init($chart);
 	}
+
+})();
+
+'use strict';
+
+//
+// Sales chart
+//
+
+var Carousel = (function() {
+
+	$('.post-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
 
 })();
