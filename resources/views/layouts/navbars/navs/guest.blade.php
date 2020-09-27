@@ -1,9 +1,9 @@
-{{-- <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
     <div class="container-fluid">
         {{-- Brand --}}
         {{-- <a class="navbar-brand pt-0" href="{{ route('home') }}">
             <img src="{{ asset('argon')}}/img/brand/pkkpbi.png" class="navbar-brand-img" alt="...">
-        </a> --}}
+        </a>
 
         {{-- Search Forms --}}
         {{-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -57,7 +57,7 @@
             </form> --}}
 
             <!-- Navbar items -->
-            {{-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="{{ route('register') }}">
                         <i class="ni ni-circle-08"></i>
@@ -70,7 +70,7 @@
                         <span class="nav-link-inner--text">{{ __('Masuk') }}</span>
                     </a>
                 </li>
-            </ul> --}}
+            </ul>
         </div>
     </div>
-</nav> --}}
+</nav>
