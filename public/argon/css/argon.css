@@ -787,6 +787,14 @@ pre code
     padding-left: 15px;
 }
 
+.fullscreen
+{
+    width: 100%;
+    overflow-y: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .row
 {
     display: flex;
@@ -7636,6 +7644,15 @@ button.close
     display: none;
 
     width: 100%;
+    height: 100vh;
+    min-height: 350px;
+
+    background: no-repeat center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     align-items: center;
     -webkit-backface-visibility: hidden;
@@ -7643,13 +7660,24 @@ button.close
     perspective: 1000px;
 }
 
+.carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6);
+  }
+
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev
 {
     display: block;
 
-    transition: transform .6s ease;
+    transition: transform .5s ease;
 }
 @media screen and (prefers-reduced-motion: reduce)
 {
@@ -8271,6 +8299,7 @@ button.bg-darker:focus
 .d-block
 {
     display: block !important;
+    margin:auto;
 }
 
 .d-table
@@ -21881,3 +21910,29 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
     display: inline-block;
     background: red;
 }
+
+
+
+  .wrapper {
+    position: relative;
+    /* display: grid; */
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+  }
+
+  .overlay {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+  }

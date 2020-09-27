@@ -1,9 +1,9 @@
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
-    <div class="container px-4">
+{{-- <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+    <div class="container-fluid">
         {{-- Brand --}}
-        <a class="navbar-brand pt-0" href="{{ route('home') }}">
+        {{-- <a class="navbar-brand pt-0" href="{{ route('home') }}">
             <img src="{{ asset('argon')}}/img/brand/pkkpbi.png" class="navbar-brand-img" alt="...">
-        </a>
+        </a> --}}
 
         {{-- Search Forms --}}
         {{-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -73,4 +73,4 @@
             </ul> --}}
         </div>
     </div>
-</nav>
+</nav> --}}
