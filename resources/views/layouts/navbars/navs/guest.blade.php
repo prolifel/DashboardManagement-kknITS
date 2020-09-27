@@ -1,8 +1,9 @@
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+<nav class="navbar fixed-top navbar-horizontal navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
         {{-- Brand --}}
-        {{-- <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon')}}/img/brand/pkkpbi.png" class="navbar-brand-img" alt="...">
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ asset('argon')}}/img/brand/pkkpbi.png" class="d-inline-block" alt="...">
+            <img src="{{ asset('argon')}}/img/brand/eduwisata.png" class="d-inline-block" alt="...">
         </a>
 
         {{-- Search Forms --}}
@@ -29,8 +30,9 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('argon') }}/img/brand/pkkpbi.png">
+                        <a class="navbar-brand" href="{{ route('home') }}">
+                            <img src="{{ asset('argon')}}/img/brand/pkkpbi.png" class="d-inline-block" alt="...">
+                            <img src="{{ asset('argon')}}/img/brand/eduwisata.png" class="d-inline-block" alt="...">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">

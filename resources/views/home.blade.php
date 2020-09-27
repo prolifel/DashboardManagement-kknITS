@@ -1,15 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
     {{-- Content --}}
 
         <div class="wrapper">
             <div id="carouselExampleIndicators" class="carousel slide box bg-transparent" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active" style="background-image: url(argon/img/brand/photo1.jpg)">
                     </div>
@@ -19,7 +15,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="box overlay">
                 <p class="h1 text-white">Selamat datang di Website Interaktif dan Marketplace KKN Abdimas ITS</p>
                 <p></p>
