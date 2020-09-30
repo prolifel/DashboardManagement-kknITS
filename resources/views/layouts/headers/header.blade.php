@@ -1,1 +1,1 @@
-<div class="header bg-white pt-md-5"></div>
+<div class="header bg-primary pt-md-5"></div>
