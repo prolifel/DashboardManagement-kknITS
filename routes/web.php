@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+// homepage
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
+// admin page
 Route::group(['middleware' => 'admin'], function () {
     Route::get('user', 'UserController@index')->name('user.index');
     Route::get('user/create','UserController@create')->name('user.create');
@@ -28,8 +30,14 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('user/delete/{id}','UserController@delete')->name('user.delete');
 });
 
+// profile user
 Route::group(['middleware' => 'auth'], function () {
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
+
+// marketplace page
+Route::get('/marketplace', ['as' => 'marketplace', 'uses' => 'MarketplaceController@index'], function () {
+    // Only authenticated users may enter...
+})->middleware('auth');

@@ -3,7 +3,6 @@
 @section('content')
 
     {{-- Content --}}
-
         <div class="wrapper">
             <div id="carouselExampleIndicators" class="carousel slide box bg-transparent" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
@@ -18,8 +17,10 @@
             <div class="box overlay">
                 <p class="h1 text-white">Selamat datang di Website Interaktif dan Marketplace KKN Abdimas ITS</p>
                 <p></p>
-                <button type="button" class="btn btn-primary">Marketplace</button>
-                <button type="button" class="btn btn-secondary">Data Tanaman</button>
+                @if (!Auth::check())
+                    <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace') }}';">Marketplace</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='{{ route('marketplace') }}';">Data Tanaman</button>
+                @endif
             </div>
         </div>
 
