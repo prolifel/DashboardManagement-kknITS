@@ -129,4 +129,5 @@
             interval: 3000
             })
     </script>
+
 @endpush
