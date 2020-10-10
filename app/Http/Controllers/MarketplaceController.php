@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Product;
 
 class MarketplaceController extends Controller
 {
@@ -13,7 +14,7 @@ class MarketplaceController extends Controller
      */
     public function index()
     {
-        $title = "Marketplace";
+        // $products = Product::orderBy('created_at', 'DESC')->paginate(10);
         return view('marketplace', compact('title'));
     }
 
