@@ -11,7 +11,7 @@
 
     <div class="container-fluid mt--7">
         <div class="card-columns">
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -19,7 +19,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -27,7 +27,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -35,7 +35,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -43,7 +43,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -51,7 +51,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -59,7 +59,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -67,7 +67,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -75,7 +75,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
@@ -83,7 +83,7 @@
                     {{-- <a href="#" class="btn btn-primary">Tambahkan ke keranjang</a> --}}
                 </div>
             </div>
-            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
+            <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('data_tanaman') }}';">
                 <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
                 <div class="card-body">
                     <h5 class="card-title font-weight-400">FORTAMEN, Herbal Khusus Pria</h5>
