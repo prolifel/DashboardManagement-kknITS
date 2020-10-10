@@ -41,3 +41,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/marketplace', ['as' => 'marketplace', 'uses' => 'MarketplaceController@index'], function () {
     // Only authenticated users may enter...
 })->middleware('auth');
+
+// data_tanaman page
+Route::get('/data_tanaman', ['as' => 'data_tanaman', 'uses' => 'DataTanamanController@index'], function () {
+    // Only authenticated users may enter...
+})->middleware('auth');
