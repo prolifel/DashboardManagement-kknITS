@@ -15,6 +15,7 @@ class MarketplaceController extends Controller
     public function index()
     {
         // $products = Product::orderBy('created_at', 'DESC')->paginate(10);
+        $title = "Marketplace";
         return view('marketplace', compact('title'));
     }
 
