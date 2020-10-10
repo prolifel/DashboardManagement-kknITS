@@ -6,16 +6,16 @@
         <div class="wrapper">
             <div id="carouselExampleIndicators" class="carousel slide box bg-transparent" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active" style="background-image: url(argon/img/brand/photo1.jpg)">
+                    <div class="carousel-item active" style="background-image: url(argon/img/brand/photo1.jpg); opacity: 0.3;">
                     </div>
-                    <div class="carousel-item" style="background-image: url(argon/img/brand/photo2.jpg)">
+                    <div class="carousel-item" style="background-image: url(argon/img/brand/photo2.jpg); opacity: 0.3;">
                     </div>
-                    <div class="carousel-item" style="background-image: url(argon/img/brand/photo3.jpg)">
+                    <div class="carousel-item" style="background-image: url(argon/img/brand/photo3.jpg); opacity: 0.3;">
                     </div>
                 </div>
             </div>
             <div class="box overlay">
-                <p class="h1 text-white">Selamat datang di Website Interaktif dan Marketplace KKN Abdimas ITS</p>
+                <p class="h1 bold text-black">Selamat datang di Website Interaktif dan Marketplace KKN Abdimas ITS</p>
                 <p></p>
                 @if (!Auth::check())
                     <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace') }}';">Marketplace</button>
