@@ -5,6 +5,15 @@
     <!-- Header container -->
     <div class="container-fluid d-flex align-items-center">
         <div class="row">
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
             <div class="col-md-12 {{ $class ?? '' }}">
                 <h1 class="display-2 text-white">{{ $title }}</h1>
                 @if (isset($description) && $description)
@@ -12,10 +21,10 @@
                 @endif
             </div>
 
-            @if(Route::current()->getName() !== 'marketplace.create')
+            @if(Route::current()->getName() === 'marketplace.index')
                 @admin
                     <div class="col-md-12">
-                        <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
                     </div>
                 @endadmin
             @endif

@@ -14,7 +14,7 @@ class MarketplaceController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::paginate(12);
         return view('marketplace.index', ['products' => $products]);
     }
 
@@ -58,7 +58,7 @@ class MarketplaceController extends Controller
         $insert['weight'] = $request->get('weight');
         Product::insert($insert);
 
-        return redirect(route('marketplace.index'))->withSuccess(__('Product successfully added.'));
+        return redirect(route('marketplace.index'))->withSuccess(('Produk berhasil ditambahkan'));
     }
 
     /**
@@ -116,7 +116,7 @@ class MarketplaceController extends Controller
 
         Product::find($id)->update($update);
 
-        return redirect(route('marketplace.index'))->withSuccess(__('Product successfully updated.'));
+        return redirect(route('marketplace.index'))->withSuccess(('Produk berhasil diedit'));
     }
 
     /**
