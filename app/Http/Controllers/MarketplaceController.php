@@ -15,7 +15,7 @@ class MarketplaceController extends Controller
     public function index()
     {
         $products = Product::paginate(10);
-        return view('marketplace', ['products' => $products]);
+        return view('marketplace.index', ['products' => $products]);
     }
 
     /**
@@ -25,7 +25,7 @@ class MarketplaceController extends Controller
      */
     public function create()
     {
-        //
+        return view('marketplace.create');
     }
 
     /**
@@ -36,7 +36,29 @@ class MarketplaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        if ($files = $request->file('image'))
+        {
+            $destinationPath = 'public/image/'; // upload path
+            $productImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
+            $files->move($destinationPath, $productImage);
+            $insert['image'] = "$productImage";
+        }
+
+        $insert['name'] = $request->get('name');
+        $insert['description'] = $request->get('description');
+        $insert['price'] = $request->get('price');
+        $insert['weight'] = $request->get('weight');
+        Product::insert($insert);
+
+        return redirect(route('marketplace.index'))->withSuccess(__('Product successfully added.'));
     }
 
     /**
@@ -47,7 +69,8 @@ class MarketplaceController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        return view('marketplace.show', ['product' => $product]);
     }
 
     /**
@@ -58,19 +81,42 @@ class MarketplaceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('marketplace.edit', ['product' => $product]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'price' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+
+        if ($files = $request->file('image'))
+        {
+            $destinationPath = 'public/image/'; // upload path
+            $productImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
+            $files->move($destinationPath, $productImage);
+            $update['image'] = "$productImage";
+        }
+
+        $update['name'] = $request->get('name');
+        $update['description'] = $request->get('description');
+        $update['price'] = $request->get('price');
+        $update['weight'] = $request->get('weight');
+
+        Product::find($id)->update($update);
+
+        return redirect(route('marketplace.index'))->withSuccess(__('Product successfully updated.'));
     }
 
     /**
@@ -79,8 +125,10 @@ class MarketplaceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Product::find($id)->delete();
+
+        return redirect(route('marketplace.index'))->withSuccess(__('Product successfully deleted.'));
     }
 }

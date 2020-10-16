@@ -11,6 +11,14 @@
                     <p class="text-white mt-0 mb-5">{{ $description }}</p>
                 @endif
             </div>
+
+            @if(Route::current()->getName() !== 'marketplace.create')
+                @admin
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
+                    </div>
+                @endadmin
+            @endif
         </div>
     </div>
 </div>

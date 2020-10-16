@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('description')->nullable();
             $table->integer('price');
             $table->double('weight')->nullable();
-            $table->string('path_to_image')->nullable();
+            $table->string('image')->nullable();
         });
     }
 

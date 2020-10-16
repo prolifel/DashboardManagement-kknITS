@@ -89,7 +89,7 @@
 
                 <!-- Marketplace -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('marketplace') }}">
+                    <a class="nav-link" href="{{ route('marketplace.index') }}">
                         <i class="ni ni-bag-17 text-primary"></i> {{ __('Marketplace') }}
                     </a>
                 </li>
@@ -97,7 +97,7 @@
                 <!-- Data Tanaman -->
                 <li class="nav-item">
                     {{-- TODO: Belum diganti routenya --}}
-                    <a class="nav-link" href="{{ route('marketplace') }}">
+                    <a class="nav-link" href="{{ route('marketplace.index') }}">
                         <i class="ni ni-album-2 text-primary"></i> {{ __('Data Tanaman') }}
                     </a>
                 </li>

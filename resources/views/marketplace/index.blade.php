@@ -7,13 +7,11 @@
         'class' => 'col'
     ])
 
-
-
     <div class="container-fluid mt--7">
         <div class="card-columns">
             @foreach($products as $product)
-                <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ route('marketplace') }}';">
-                    <img class="card-img-top" src="{{ asset('argon')}}/img/marketplace/fortamen_1.jpg" alt="Icon">
+                <div class="card border-0 text-center" style="width: 10rem" onclick="window.location.href='{{ url('/show/' . $product->id) }}';">
+                    <img class="card-img-top" src="{{ asset('public') }}/image/{{ $product->image }}" alt="Icon">
                     <div class="card-body">
                         <h5 class="card-title font-weight-400">{{ $product->name }}</h5>
                         <p class="card-text font-weight-bold">Rp{{ $product->price }}</p>
@@ -22,6 +20,9 @@
             @endforeach
         </div>
 
+        <div class="d-flex justify-content-center">
+            {{ $products->links() }}
+        </div>
         @include('layouts.footers.footer')
     </div>
 @endsection

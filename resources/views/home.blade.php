@@ -18,7 +18,7 @@
                 <p class="h1 bold text-black">Selamat datang di Website Interaktif dan Marketplace KKN Abdimas ITS</p>
                 <p></p>
                 @if (!Auth::check())
-                    <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace') }}';">Marketplace</button>
+                    <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.index') }}';">Marketplace</button>
                     <button class="btn btn-secondary" onclick="window.location.href='{{ route('data_tanaman') }}';">Data Tanaman</button>
                 @endif
             </div>

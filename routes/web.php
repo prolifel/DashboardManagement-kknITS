@@ -28,6 +28,12 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('user/update','UserController@update')->name('user.update');
     Route::post('user/password','UserController@password')->name('user.password');
     Route::get('user/delete/{id}','UserController@delete')->name('user.delete');
+
+    Route::get('marketplace/create', 'MarketplaceController@create')->name('marketplace.create');
+    Route::post('marketplace/store','MarketplaceController@store')->name('marketplace.store');
+    Route::get('marketplace/edit/{id}','MarketplaceController@edit')->name('marketplace.edit');
+    Route::post('marketplace/update/{id}','MarketplaceController@update')->name('marketplace.update');
+    Route::get('marketplace/delete/{id}','MarketplaceController@delete')->name('marketplace.delete');
 });
 
 // profile user
@@ -35,12 +41,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-});
 
-// marketplace page
-Route::get('/marketplace', ['as' => 'marketplace', 'uses' => 'MarketplaceController@index'], function () {
-    // Only authenticated users may enter...
-})->middleware('auth');
+    Route::get('marketplace', 'MarketplaceController@index')->name('marketplace.index');
+    Route::get('marketplace/show/{id}', 'MarketplaceController@show')->name('marketplace.show');
+});
 
 // data_tanaman page
 Route::get('/data_tanaman', ['as' => 'data_tanaman', 'uses' => 'DataTanamanController@index'], function () {
