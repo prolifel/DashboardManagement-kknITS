@@ -5716,15 +5716,15 @@ input[type='button'].btn-block
     background-clip: border-box;
 
     /* box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); */
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-    cursor: pointer;
+    /* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer; */
 }
 
-.card:hover{
+/* .card:hover{
     transform: scale(1.01);
     /* border: 0px;
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06); */
-}
+} */
 
 .card > hr
 {
@@ -16645,6 +16645,17 @@ a.text-lighter:focus
     color: #cbd3da !important;
 }
 
+.text-price
+{
+    color: rgb(250, 89, 29) !important;
+}
+
+a.text-lighter:hover,
+a.text-lighter:focus
+{
+    color: rgb(212, 75, 25) !important;
+}
+
 @media (min-width: 992px)
 {
     .transform-perspective-right
@@ -21996,4 +22007,16 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
   .half{
       width: 25%;
       height: 25%;
+  }
+
+  .box-img {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 350px;
+    width: 350px;
+  }
+
+  .box-img img {
+    width: 100%;
   }
