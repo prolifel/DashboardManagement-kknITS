@@ -54,6 +54,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('marketplace/cart', 'CartController@listCart')->name('marketplace.list_cart');
     Route::post('marketplace/cart/update', 'CartController@updateCart')->name('marketplace.update_cart');
 
+});
+
     Route::get('data_tanaman', 'DataTanamanController@index')->name('data_tanaman.index');
     Route::get('data_tanaman/show/{id}', 'DataTanamanController@show')->name('data_tanaman.show');
-});
