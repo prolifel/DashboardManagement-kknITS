@@ -54,8 +54,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('data_tanaman', 'DataTanamanController@index')->name('data_tanaman.index');
     Route::get('data_tanaman/show/{id}', 'DataTanamanController@show')->name('data_tanaman.show');
 });
-
-// data_tanaman page
-Route::get('/data_tanaman', ['as' => 'data_tanaman', 'uses' => 'DataTanamanController@index'], function () {
-    // Only authenticated users may enter...
-})->middleware('auth');

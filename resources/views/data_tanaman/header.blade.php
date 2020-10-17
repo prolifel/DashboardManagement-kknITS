@@ -24,7 +24,7 @@
             @if(Route::current()->getName() === 'data_tanaman.index')
                 @admin
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('data_tanaman.create') }}';">Tambah Tanaman</button>
                     </div>
                 @endadmin
             @endif
