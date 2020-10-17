@@ -15,11 +15,11 @@ class CreateTablePlants extends Migration
     {
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('scientific_name');
-            $table->string('family');
-            $table->string('chemical_content');
-            $table->string('usability');
+            $table->text('name');
+            $table->text('scientific_name');
+            $table->text('family');
+            $table->text('chemical_content');
+            $table->text('usability');
         });
     }
 
