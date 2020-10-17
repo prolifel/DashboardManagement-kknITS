@@ -31,7 +31,7 @@
                     {{-- Input Scientific --}}
                     <div class="form-group">
                       <label for="inputDescription">Nama Ilmiah</label>
-                      <textarea name="scientific_name" class="form-control" id="inputDescription" rows="3" placeholder="Jamu Herbal asal Batu. Tidak dicampur dengan bahan buatan, 100% alami" required></textarea>
+                      <textarea name="scientific_name" class="form-control" id="inputDescription" rows="3" placeholder="Foeniculum vulgare" required></textarea>
 
                         @if ($errors->has('description'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -43,7 +43,7 @@
                     {{-- Input Family --}}
                     <div class="form-group">
                       <label for="inputName">Family</label>
-                      <input type="text" name="family" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="family" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Aplaceae" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -55,7 +55,7 @@
                     {{-- Input Chemical --}}
                     <div class="form-group">
                       <label for="inputName">Kandungan Kimia</label>
-                      <input type="text" name="chemical_content" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="chemical_content" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Vitamin A, Vitamin B1, Vitamin B2" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -67,7 +67,7 @@
                     {{-- Input Usability --}}
                     <div class="form-group">
                       <label for="inputName">Kegunaan</label>
-                      <input type="text" name="usability" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="usability" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Mengatasi diare, melancarkan pencernaan" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">

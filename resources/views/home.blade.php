@@ -19,7 +19,7 @@
                 <p></p>
                 @if (!Auth::check())
                     <button class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.index') }}';">Marketplace</button>
-                    <button class="btn btn-secondary" onclick="window.location.href='{{ route('data_tanaman') }}';">Data Tanaman</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='{{ route('data_tanaman.index') }}';">Data Tanaman</button>
                 @endif
             </div>
         </div>
