@@ -97,7 +97,7 @@
                 <!-- Data Tanaman -->
                 <li class="nav-item">
                     {{-- TODO: Belum diganti routenya --}}
-                    <a class="nav-link" href="{{ route('marketplace.index') }}">
+                    <a class="nav-link" href="{{ route('data_tanaman.index') }}">
                         <i class="ni ni-album-2 text-primary"></i> {{ __('Data Tanaman') }}
                     </a>
                 </li>
