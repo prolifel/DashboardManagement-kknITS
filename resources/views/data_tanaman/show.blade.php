@@ -20,6 +20,16 @@
                         <div class="py-3">
                             <div class="row">
                                 <div class="col-md-3">
+                                    <p class="text-muted">Family</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p>{{ $plant->family }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <div class="row">
+                                <div class="col-md-3">
                                     <p class="text-muted">Kandungan Kimia</p>
                                 </div>
                                 <div class="col-md-9">

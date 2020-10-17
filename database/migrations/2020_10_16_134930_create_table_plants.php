@@ -20,6 +20,7 @@ class CreateTablePlants extends Migration
             $table->text('family');
             $table->text('chemical_content');
             $table->text('usability');
+            $table->string('image')->nullable();
         });
     }
 

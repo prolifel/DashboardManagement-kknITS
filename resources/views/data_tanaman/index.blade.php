@@ -2,7 +2,7 @@
 
 @section('content')
     @include('data_tanaman.header', [
-        'title' => __('Data_Tanaman'),
+        'title' => __('Data Tanaman'),
         'class' => 'col'
     ])
 

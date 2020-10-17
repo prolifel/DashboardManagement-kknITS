@@ -19,7 +19,8 @@
                     {{-- Input Name --}}
                     <div class="form-group">
                       <label for="inputName">Nama Tanaman</label>
-                      <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji"
+                      value="{{ $plant->name }}" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -31,7 +32,8 @@
                     {{-- Input Scientific --}}
                     <div class="form-group">
                       <label for="inputDescription">Nama Ilmiah</label>
-                      <textarea name="scientific_name" class="form-control" id="inputDescription" rows="3" placeholder="Jamu Herbal asal Batu. Tidak dicampur dengan bahan buatan, 100% alami" required></textarea>
+                      <input name="scientific_name" class="form-control" id="inputDescription" rows="3" placeholder="Foeniculum vulgare" 
+                      value="{{ $plant->scientific_name }}" required></input>
 
                         @if ($errors->has('description'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -43,7 +45,8 @@
                     {{-- Input Family --}}
                     <div class="form-group">
                       <label for="inputName">Family</label>
-                      <input type="text" name="family" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="family" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Aplaceae"
+                      value="{{ $plant->family }}" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -55,7 +58,8 @@
                     {{-- Input Chemical --}}
                     <div class="form-group">
                       <label for="inputName">Kandungan Kimia</label>
-                      <input type="text" name="chemical_content" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="chemical_content" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Vitamin A" 
+                      value="{{ $plant->chemical_content }}" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -67,7 +71,8 @@
                     {{-- Input Usability --}}
                     <div class="form-group">
                       <label for="inputName">Kegunaan</label>
-                      <input type="text" name="usability" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Jambu Biji" required autofocus>
+                      <input type="text" name="usability" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="inputName" placeholder="Mengatasi Diare" 
+                      value="{{ $plant->usability }}" required autofocus>
 
                         @if ($errors->has('name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
