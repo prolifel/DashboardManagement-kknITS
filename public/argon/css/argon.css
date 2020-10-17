@@ -22009,6 +22009,11 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
       height: 25%;
   }
 
+  .smaller{
+    width: 15%;
+    height: 15%;
+}
+
   .box-img {
     overflow: hidden;
     border-radius: 8px;

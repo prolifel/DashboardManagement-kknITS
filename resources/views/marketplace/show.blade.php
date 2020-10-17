@@ -27,7 +27,17 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="align-self-end btn btn-lg btn-block btn-primary">Tambahkan ke Keranjang</button>
+                        <form action="{{ route('marketplace.cart') }}" method="POST">
+                            @csrf
+                            <div class="form-group row">
+                                <label for="qty" class="col-sm-3 col-form-label">Jumlah:</label>
+                                <div class="col-2">
+                                    <input type="text" name="qty" id="sst" value="1" class="form-control">
+                                </div>
+                                <input type="hidden" name="product_id" value="{{ $product->id }}" class="form-control">
+                            </div>
+                            <button class="align-self-end btn btn-lg btn-block btn-primary">Tambahkan ke Keranjang</button>
+                        </form>
                     </div>
                 </div>
             </div>
