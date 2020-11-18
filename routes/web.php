@@ -48,13 +48,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
-    Route::get('marketplace', 'MarketplaceController@index')->name('marketplace.index');
-    Route::get('marketplace/show/{id}', 'MarketplaceController@show')->name('marketplace.show');
     Route::post('marketplace/cart', 'CartController@addToCart')->name('marketplace.cart');
     Route::get('marketplace/cart', 'CartController@listCart')->name('marketplace.list_cart');
     Route::post('marketplace/cart/update', 'CartController@updateCart')->name('marketplace.update_cart');
 
 });
 
+    // Marketplace open for public
+    // until user add to cart
+    Route::get('marketplace', 'MarketplaceController@index')->name('marketplace.index');
+    Route::get('marketplace/show/{id}', 'MarketplaceController@show')->name('marketplace.show');
+
+    // Plants show for public
     Route::get('data_tanaman', 'DataTanamanController@index')->name('data_tanaman.index');
     Route::get('data_tanaman/show/{id}', 'DataTanamanController@show')->name('data_tanaman.show');
