@@ -27,6 +27,11 @@
                         <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
                     </div>
                 @endadmin
+                @auth()
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.cart') }}';">Keranjang Belanja</button>
+                    </div>
+                @endauth
             @endif
         </div>
     </div>

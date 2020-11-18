@@ -59,7 +59,7 @@
                         <tr>
                             <td colspan="2"></td>
                             <td colspan="2">
-                                <button class="align-self-end btn btn-lg btn-block btn-primary">Checkout</button>
+                                <button class="align-self-end btn btn-lg btn-block btn-primary" onclick="window.location.href='{{ route('marketplace.checkout') }}';">Checkout</button>
                             </td>
                         </tr>
                     </tbody>

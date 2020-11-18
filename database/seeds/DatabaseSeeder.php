@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call([CovidProvincesTableSeeder::class]);
         $this->call([ProductsTableSeeder::class]);
         $this->call([PlantsTableSeeder::class]);
+        $this->call(ProvinceTableSeeder::class);
+        $this->call(CityTableSeeder::class);
+        $this->call(DistrictTableSeeder::class);
     }
 }
