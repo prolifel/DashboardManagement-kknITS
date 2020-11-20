@@ -10,7 +10,7 @@
     <div class="container-fluid mt--7">
         <div class="card">
             <div class="card-body">
-                <form class="row contact_form" action="{{ route('marketplace.store_checkout') }}" method="post" novalidate="novalidate">
+                <form class="row contact_form" action="{{ route('marketplace.store_checkout') }}" method="POST" novalidate="novalidate">
                     @csrf
                     <div class="col-md-12 form-group p_star">
                         <label for="">Nama Lengkap</label>
@@ -98,7 +98,7 @@
                                     </a>
                                 </li>
                             </ul>
-                    <button class="main_btn">Bayar Pesanan</button>
+                    <button class="btn btn-primary" type="submit">Bayar Pesanan</button>
                 </form>
             </div>
         </div>

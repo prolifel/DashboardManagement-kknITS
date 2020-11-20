@@ -196,6 +196,7 @@ class CartController extends Controller
         //AMBIL DATA PESANAN BERDASARKAN INVOICE
         $order = Order::with(['district.city'])->where('invoice', $invoice)->first();
         //LOAD VIEW checkout_finish.blade.php DAN PASSING DATA ORDER
-        return view('ecommerce.checkout_finish', compact('order'));
+        return view('marketplace.ordered', compact('order'));
+        // return redirect(route('marketplace.ordered'), compact('order'));
     }
 }
