@@ -15,7 +15,7 @@ class DataTanamanController extends Controller
     public function index()
     {
         // $Plants = Plant::orderBy('created_at', 'DESC')->paginate(10);
-        $plants = Plant::paginate(10);
+        $plants = Plant::paginate(12);
         return view('data_tanaman.index', ['plants' => $plants]);
     }
 
