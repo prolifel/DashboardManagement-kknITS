@@ -3,6 +3,7 @@
 @section('content')
     @include('data_tanaman.header', [
         'title' => __('Data Tanaman'),
+        'description' => __('Berikut adalah Tanaman-tanaman Herbal yang tersebar di sekitaran Batu'),
         'class' => 'col'
     ])
 
