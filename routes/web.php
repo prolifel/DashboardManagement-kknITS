@@ -53,7 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('marketplace/cart/update', 'CartController@updateCart')->name('marketplace.update_cart');
     Route::get('marketplace/checkout', 'CartController@checkout')->name('marketplace.checkout');
     Route::post('marketplace/checkout', 'CartController@processCheckout')->name('marketplace.store_checkout');
-    Route::get('marketplace/checkout/{invoice}', 'CartController@checkoutFinish')->name('marketplace.finish_checkout');
+    Route::get('marketplace/checkout/{invoice}', 'CartController@checkoutFinish')->name('marketplace.ordered');
 });
 
     // Marketplace open for public
