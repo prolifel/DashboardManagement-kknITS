@@ -11,7 +11,7 @@
         <div class="card-columns">
             @foreach($products as $product)
                 <div class="card border-0 text-center" style="width: 14rem">
-                    <img class="card-img-top" src="{{ asset('public') }}/image/{{ $product->image }}" alt="Icon" onclick="window.location.href='{{ route('marketplace.show', $product->id) }}';">
+                    <img class="card-img-top" src="{{ asset('public') }}/image/{{ $product->image }}" width=13px height=200px alt="Icon" onclick="window.location.href='{{ route('marketplace.show', $product->id) }}';">
                     <div class="card-body">
                         <h5 class="card-title font-weight-400" onclick="window.location.href='{{ route('marketplace.show', $product->id) }}';">{{ $product->name }}</h5>
                         <p class="card-text font-weight-bold" onclick="window.location.href='{{ route('marketplace.show', $product->id) }}';">Rp{{ $product->price }}</p>

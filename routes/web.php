@@ -29,6 +29,10 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('user/password','UserController@password')->name('user.password');
     Route::get('user/delete/{id}','UserController@delete')->name('user.delete');
 
+    Route::get('orders', 'OrderController@index')->name('customer.orders');
+    Route::get('orders/{invoice}', 'OrderController@view')->name('customer.view_order');
+    Route::post('orders/{invoice}', 'OrderController@editStatus')->name('customer.edit_status');
+
     Route::get('marketplace/create', 'MarketplaceController@create')->name('marketplace.create');
     Route::post('marketplace/store','MarketplaceController@store')->name('marketplace.store');
     Route::get('marketplace/edit/{id}','MarketplaceController@edit')->name('marketplace.edit');
@@ -53,7 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('marketplace/cart/update', 'CartController@updateCart')->name('marketplace.update_cart');
     Route::get('marketplace/checkout', 'CartController@checkout')->name('marketplace.checkout');
     Route::post('marketplace/checkout', 'CartController@processCheckout')->name('marketplace.store_checkout');
-    Route::get('marketplace/checkout/{invoice}', 'CartController@checkoutFinish')->name('marketplace.ordered');
+    Route::get('marketplace/checkout/{invoice}', 'CartController@checkoutFinish')->name('marketplace.finish_ordered');
 });
 
     // Marketplace open for public
@@ -64,3 +68,6 @@ Route::group(['middleware' => 'auth'], function () {
     // Plants show for public
     Route::get('data_tanaman', 'DataTanamanController@index')->name('data_tanaman.index');
     Route::get('data_tanaman/show/{id}', 'DataTanamanController@show')->name('data_tanaman.show');
+
+    // Whatsapp Route
+    Route::get('whatsapp/{number}', 'WhatsappController@redirect')->name('whatsapp');

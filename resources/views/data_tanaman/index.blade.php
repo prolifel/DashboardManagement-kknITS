@@ -25,7 +25,7 @@
         <div class="card-columns">
             @foreach($plants as $plant)
                 <div class="card border-0 text-center" style="width: 14rem">
-                    <img class="card-img-top" src="{{ asset('public') }}/image/{{ $plant->image }}" widht=13px height=200px alt="Icon" onclick="window.location.href='{{ route('data_tanaman.show', $plant->id) }}';">
+                    <img class="card-img-top" src="{{ asset('public') }}/image/{{ $plant->image }}" width=13px height=200px alt="Icon" onclick="window.location.href='{{ route('data_tanaman.show', $plant->id) }}';">
                     <div class="card-body">
                         <h5 class="card-title font-weight-400" onclick="window.location.href='{{ route('data_tanaman.show', $plant->id) }}';">{{ $plant->name }}</h5>
                         @admin

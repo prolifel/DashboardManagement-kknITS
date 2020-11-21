@@ -182,7 +182,7 @@ class CartController extends Controller
             //KOSONGKAN DATA KERANJANG DI COOKIE
             $cookie = cookie('dw-carts', json_encode($carts), 2880);
             //REDIRECT KE HALAMAN FINISH TRANSAKSI
-            return redirect(route('front.finish_checkout', $order->invoice))->cookie($cookie);
+            return redirect(route('marketplace.finish_ordered', $order->invoice))->cookie($cookie);
         } catch (\Exception $e) {
             //JIKA TERJADI ERROR, MAKA ROLLBACK DATANYA
             DB::rollback();
