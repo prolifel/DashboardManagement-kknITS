@@ -3,6 +3,7 @@
 @section('content')
     @include('data_tanaman.header', [
         'title' => __('Data Tanaman'),
+        'description' => __('Indonesia adalah negara dengan potensi tanaman herbal yang besar. Kota Batu terkenal sebagai kota agroindustri di Provinsi Jawa Timur, dari hal tersebut kita juga bisa mengetahui bahwa Kota Batu juga memiliki potensi tumbuhan herbal yang cukup besar. Berikut ini adalah list khasiat tanamam herbal yang tersebar di Kota Batu dan sekitarnya.'),
         'class' => 'col'
     ])
 
