@@ -104,8 +104,8 @@
 
                 @admin
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('user.index') }}">
-                            <i class="ni ni-settings text-primary"></i> {{ __('User Management') }}
+                        <a class="nav-link" href="{{ route('customer.orders') }}">
+                            <i class="ni ni-settings text-primary"></i> {{ __('Administrator') }}
                         </a>
                     </li>
                 @endadmin

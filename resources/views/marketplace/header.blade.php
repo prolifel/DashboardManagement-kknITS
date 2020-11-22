@@ -23,15 +23,15 @@
 
             @if(Route::current()->getName() === 'marketplace.index')
                 @admin
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
+                    <div class="col-md-12 mb-4">
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='{{ route('marketplace.create') }}';">Tambah Produk</button>
                     </div>
                 @endadmin
-                @auth()
+                @if(Auth::check() && Auth::user()->role !== "admin")
                     <div class="col-md-12">
                         <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('marketplace.cart') }}';">Keranjang Belanja</button>
                     </div>
-                @endauth
+                @endif
             @endif
         </div>
     </div>

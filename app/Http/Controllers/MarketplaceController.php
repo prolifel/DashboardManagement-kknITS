@@ -37,8 +37,8 @@ class MarketplaceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'required|max:255',
+            'name' => 'required|max:50',
+            'description' => 'required|max:500',
             'price' => 'required|numeric',
             'weight' => 'required|numeric',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
@@ -94,8 +94,8 @@ class MarketplaceController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'required|max:255',
+            'name' => 'required|max:50',
+            'description' => 'required|max:500',
             'price' => 'required|numeric',
             'weight' => 'required|numeric',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
